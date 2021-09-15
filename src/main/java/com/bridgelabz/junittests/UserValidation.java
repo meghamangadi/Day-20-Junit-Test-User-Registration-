@@ -5,11 +5,11 @@ import java.util.regex.Pattern;
 
 public class UserValidation {
 
-	public boolean firstName(String firstName) {
+	public boolean lastName(String lastName) {
 
 		String regex = "^[A-Z]{1}[a-z]{2,}$";
 		Pattern pattern = Pattern.compile(regex);
-		Matcher matcher = pattern.matcher(firstName);
+		Matcher matcher = pattern.matcher(lastName);
 		return matcher.matches();
 	}
 }
