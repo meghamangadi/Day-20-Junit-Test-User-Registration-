@@ -55,11 +55,21 @@ public class EmailValidationTest {
 	}
 
 	@Test
-    public void givenEmail1_WhenProper_ShouldReturnTrue() {
-        boolean result =  validation.email("abc.100@abc.com.au");
-        Assert.assertEquals(true, result);
-    }
-	
+	public void givenEmail1_WhenProper_ShouldReturnTrue() {
+		boolean result = validation.email("abc.100@abc.com.au");
+		Assert.assertEquals(true, result);
+	}
 
+	@Test
+	public void givenMessage_WhenHappy_ShouldReturnEntrySuccessful() {
+		String result = MoodAnalyser.analyseMood("User is Happy");
+		Assert.assertEquals("Entry Successful", result);
+	}
+
+	@Test
+	public void givenEmail2_WhenNotProper_ShouldReturnEntryFailed() {
+		String result = MoodAnalyser.analyseMood("User is Sad");
+		Assert.assertEquals("Entry Failed", result);
+	}
 
 }

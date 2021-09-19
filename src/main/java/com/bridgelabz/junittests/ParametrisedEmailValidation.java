@@ -12,4 +12,4 @@ public class ParametrisedEmailValidation {
 		return matcher.matches();
 	}
 
-} 
+}
